@@ -1,5 +1,21 @@
 @use "tailwindcss";
+@use "primeicons/primeicons.css";
 
 .background {
   background-color:  #0f0716;
+}
+
+.text-primary {
+  color: #836bc1;
+}
+
+.border-primary {
+  border-color: #836bc1;
+}
+
+.pi {
+    transform: translateZ(0); 
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

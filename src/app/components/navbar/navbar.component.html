@@ -1,25 +1,42 @@
-<div class="w-full h-18 bg-red-300">
-  <div class="flex w-full justify-around  items-center px-4 h-full">
-    <div>
+<div class="w-full h-18">
+  <div class="flex w-full justify-end items-center h-full">
+    @if(device === 'tablet'){
       <div class="flex flex-row">
         <span class="text-white">elvis.contact.me gmail.com</span>
       </div>
-    </div>
-    <div class="flex  gap-10 text-white">
-      <a href="">
-        Home 
-      </a>
-      <a href="">
-        About 
-      </a>
-      <a href="">
-        Services 
-      </a>
-      <button>
-        Contact me
-      </button>
-      
-    </div>
+    }@else {
+      <div class="z-2">
+        <button (click)="openMenu()" class="w-9 h-9 mr-4 cursor-pointer border border-primary rounded-full z-30">
+          <span 
+            [class]="isOpen ? 'pi pi-times' : 'pi pi-bars'" 
+            class="text-primary text-sm">
+          </span>
+        </button>
+      </div>
+    }
 
-  </div>
+    @if(isOpen){
+      
+      <div class="w-full h-50 top-0 flex absolute z-1 text-white">
+        <div class="absolute w-full h-40 background-navbar z-1"></div>
+        <ul class="mt-2.5 w-full text-center flex flex-col z-2 text-primary">
+            <a class="py-3" href="">
+              Home 
+            </a>
+            <a class="py-3" href="">
+              About 
+            </a>
+            <a class="py-3" href="">
+              Services 
+            </a>
+            <button class="py-3">
+              Contact me
+            </button>
+        </ul>
+      </div>
+    }
+
+    
+
+    
 </div>
