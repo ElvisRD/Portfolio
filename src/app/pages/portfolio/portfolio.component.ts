@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CardExperienceComponent } from '../../components/card-experience/card-experience.component';
-import {experience} from '../../../../public/data/experience.json'
+import {cv} from '../../../../public/data/experience.json'
 
 
 @Component({
@@ -29,5 +29,10 @@ export class PortfolioComponent {
       url: ''
     }
   ]
-  experienceList = experience;
+  experienceList = cv;
+  
+  ngOnInit(){
+    console.log(cv)
+  }
+
 }

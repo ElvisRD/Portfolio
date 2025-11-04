@@ -1,31 +1,37 @@
 {
-  "experience": [
+  "cv": [
     {
-      "dates": "2003 - 2300",
-      "position": "siii",
-      "description": "siii",
-      "location": "asdfasd"
+      "titleExperience": "Mi Experiencia",
+      "experience": [
+    {
+      "dates": "Julio 2023 - Julio 2024",
+      "position": "Desarrollador Full Stack",
+      "description": "Participó en el desarrollo de un SaaS de tipo LMS con más de 50.000 usuarios activos. Diseñó y desarrolló interfaces de usuario responsivas con Angular 18 y PrimeNG. Diseñó, implementó y optimizó microservicios utilizando Spring Boot con Java 20, desarrollando APIs RESTful internas. Colaboró en un equipo ágil usando Git y Jira.",
+      "location": "CLIKMA"
     },
     {
-      "dates": "2003 - 2300",
-      "position": "siii",
-      "description": "siii",
-      "location": "asdfasd"
+      "dates": "Julio 2022 - Diciembre 2022",
+      "position": "Desarrollador Movil",
+      "description": "Diseño y desarrollo de una aplicación móvil orientada a fortalecer la seguridad en la Universidad del Bio-Bío, utilizando React Native y Expo CLI. Diseño y desarrollo de servicios RESTful en Node.js, empleando Prisma ORM para datos en MySQL. Desarrollo de funcionalidades en tiempo real con Socket.IO. Implementación de autenticación con JWT y encriptación. Integración de servicios de geolocalización. Participó en reuniones con las clientas.",
+      "location": "Universidad del BioBio"
     },
     {
-      "dates": "2003 - 2300",
-      "position": "siii",
-      "description": "siii",
-      "location": "asdfasd"
-    }
-  ],
-  "education": [
-    {
-      "dates": "2003 - 2300",
-      "name": "ssss",
-      "location": ""
+      "dates": "Marzo 2022 - Junio 2022",
+      "position": "Desarrollador Móvil (Práctica profesional)",
+      "description": "Desarrollo e implementación de interfaces móviles a partir de prototipos en Figma, utilizando React Native y Expo CLI. Implementación de APIs de Google para geolocalización y la identificación de ubicaciones especificas. Investigación y análisis de diversas librerías.",
+      "location": "Pryx"
     }
   ]
-
-   
+    },
+    {
+      "titleExperience": "Mi Educación",
+      "experience": [
+        {
+          "dates": "2019 - 2022",
+          "position": "Ingeniería de Ejecución en Computacion e Informática",
+          "location": "Universidad del BioBio"
+        }
+      ]
+    }
+  ]
 }

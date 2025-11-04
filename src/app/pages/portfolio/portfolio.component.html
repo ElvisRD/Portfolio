@@ -41,26 +41,23 @@
         <span class="text-md text-primary pi pi-arrow-down"></span>
     </button>
 </div>
-<section class="w-full h-[800px] background-secundary">
-  <div class="flex flex-col items-center w-full h-full ">
-    <div class="flex mt-12 items-center justify-center gap-3">
-      <span class="text-primary text-3xl pi pi-sparkles"></span>
-      <h3 class="text-experience text-3xl">Mi Experiencia</h3>
+<section class="w-full background-secundary pb-12">
+  @for (experience of experienceList; track $index) {
+    <div class="flex flex-col items-center w-full">
+      <div class="flex mt-12 items-center justify-center gap-3">
+        <span class="text-primary text-3xl pi pi-sparkles"></span>
+        <h3 class="text-experience text-3xl">{{experience.titleExperience}}</h3>
+      </div>
+      <div class="mt-12 flex w-10/12 flex-col gap-6">
+        @for (exp of experience.experience; track $index) {
+          <app-card-experience
+            [data]="exp"
+          ></app-card-experience>
+        }
+      </div>  
     </div>
-    <div class="mt-12 flex w-10/12 flex-col gap-6 bg-red-900">
-      @for (experience of experienceList; track $index) {
-        <app-card-experience
-          [data]="experience"
-        ></app-card-experience>
-      }
-    </div>  
-  </div>
-  <div class="w-5/12">
-    <div>
-      <span></span>
-      <h3>Mi Educación</h3>
-    </div>
-  </div>
+  }
+  
 </section>
 <section></section>
 
