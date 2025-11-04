@@ -1,5 +1,9 @@
 {
   "home": {
-    "presentation": "I am Elvis Rodriguez"
+   "presentation": "Soy Elvis Rodríguez",
+   "profession": "Ingeniero de software Full-Stack",
+   "description": "Welcome to my portfolio website where I showcase my projects and skills as a software engineer.",
+    "downloadCV": "Download CV"
+    
   }
 }

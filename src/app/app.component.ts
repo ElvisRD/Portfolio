@@ -11,4 +11,22 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  networks = [
+    {
+      icon: 'pi pi-instagram',
+      url: ''
+    },
+    {
+      icon: 'pi pi-telegram',
+      url: ''
+    },
+    {
+      icon: 'pi pi-linkedin',
+      url: ''
+    },
+    {
+      icon: 'pi pi-github',
+      url: ''
+    }
+  ]
 }

@@ -24,12 +24,15 @@ export class NavbarComponent {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      if(width <= 480){
+      if(width <= 640){
         this.device = 'phone';
-      }else if(width > 480 && width <= 768){
+        this.isOpen = false;
+      }else if(width <= 768){
         this.device = 'tablet';
+        this.isOpen = true;
       }else{
         this.device = 'desktop';
+        this.isOpen = true;
       }
   }
 

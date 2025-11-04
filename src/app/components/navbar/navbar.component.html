@@ -1,12 +1,12 @@
-<div class="w-full h-18">
-  <div class="flex w-full justify-end items-center h-full">
-    @if(device === 'tablet'){
+<div class="flex w-full fixed h-18 z-1">
+  <div class="flex w-full justify-end md:justify-around items-center h-full">
+    @if(device === 'desktop'){
       <div class="flex flex-row">
         <span class="text-white">elvis.contact.me gmail.com</span>
       </div>
-    }@else {
-      <div class="z-2">
-        <button (click)="openMenu()" class="w-9 h-9 mr-4 cursor-pointer border border-primary rounded-full z-30">
+    }@else if(device === 'phone') {
+      <div class="z-3">
+        <button (click)="openMenu()" class="w-9 h-9 mr-4 cursor-pointer border border-primary rounded-full z-2">
           <span 
             [class]="isOpen ? 'pi pi-times' : 'pi pi-bars'" 
             class="text-primary text-sm">
@@ -16,22 +16,23 @@
     }
 
     @if(isOpen){
-      
-      <div class="w-full h-50 top-0 flex absolute z-1 text-white">
-        <div class="absolute w-full h-40 background-navbar z-1"></div>
-        <ul class="mt-2.5 w-full text-center flex flex-col z-2 text-primary">
-            <a class="py-3" href="">
+      <div class="flex text-white w-full h-50 items-center absolute  top-0 z-2 md:w-2/5 md:relative md:z-1 sm:h-18 ">
+        @if(device === 'phone'){
+          <div class="absolute w-full h-40 background-navbar"></div>
+        }
+        <ul class="flex w-full text-center justify-center z-3 flex-col gap-5 sm:flex-row">
+            <a  href="">
               Home 
             </a>
-            <a class="py-3" href="">
+            <a class="" href="">
               About 
             </a>
-            <a class="py-3" href="">
+            <a class="" href="">
               Services 
             </a>
-            <button class="py-3">
+            <a href="">
               Contact me
-            </button>
+            </a>
         </ul>
       </div>
     }

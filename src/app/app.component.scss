@@ -20,25 +20,19 @@
 }
 
 .img-profile{
-  width: 350px;
-  height: 350px;
   border-radius: 20px;
+  object-fit: cover;
   transform: rotate(4deg);
-  background-image: url('../../public/profile.jpg');
-  background-size: cover;
-  background-position: center;
   border: 1px solid #342b46;
-
 }
 
 .text-profession{
-  background: linear-gradient(to right, #836bc1, #c0c0c0); 
+  background: linear-gradient(to right, #8e5dee, #c3bacb); 
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   font-weight: bold;
-  text-align: center;
 }
 
 .links{
