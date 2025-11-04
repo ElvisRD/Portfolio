@@ -8,7 +8,6 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  device: string = '';
   isOpen: boolean = false;
 
   ngOnInit(): void {
@@ -22,18 +21,8 @@ export class NavbarComponent {
 
   checkDevice(): void {
       const width = window.innerWidth;
-      const height = window.innerHeight;
 
-      if(width <= 640){
-        this.device = 'phone';
-        this.isOpen = false;
-      }else if(width <= 768){
-        this.device = 'tablet';
-        this.isOpen = true;
-      }else{
-        this.device = 'desktop';
-        this.isOpen = true;
-      }
+      this.isOpen = width <= 640 ? false : true; 
   }
 
   openMenu(): void {

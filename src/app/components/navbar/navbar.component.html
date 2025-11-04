@@ -1,11 +1,9 @@
 <div class="flex w-full fixed h-18 z-1">
   <div class="flex w-full justify-end md:justify-around items-center h-full">
-    @if(device === 'desktop'){
-      <div class="flex flex-row">
+      <div class="hidden xl:block flex flex-row">
         <span class="text-white">elvis.contact.me gmail.com</span>
       </div>
-    }@else if(device === 'phone') {
-      <div class="z-3">
+      <div class="block sm:hidden z-3">
         <button (click)="openMenu()" class="w-9 h-9 mr-4 cursor-pointer border border-primary rounded-full z-2">
           <span 
             [class]="isOpen ? 'pi pi-times' : 'pi pi-bars'" 
@@ -13,13 +11,9 @@
           </span>
         </button>
       </div>
-    }
-
     @if(isOpen){
       <div class="flex text-white w-full h-50 items-center absolute  top-0 z-2 md:w-2/5 md:relative md:z-1 sm:h-18 ">
-        @if(device === 'phone'){
-          <div class="absolute w-full h-40 background-navbar"></div>
-        }
+        <div class="absolute sm:hidden w-full h-40 background-navbar"></div>
         <ul class="flex w-full text-center justify-center z-3 flex-col gap-5 sm:flex-row">
             <a  href="">
               Home 
