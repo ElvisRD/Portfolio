@@ -1,0 +1,31 @@
+{
+  "experience": [
+    {
+      "dates": "2003 - 2300",
+      "position": "siii",
+      "description": "siii",
+      "location": "asdfasd"
+    },
+    {
+      "dates": "2003 - 2300",
+      "position": "siii",
+      "description": "siii",
+      "location": "asdfasd"
+    },
+    {
+      "dates": "2003 - 2300",
+      "position": "siii",
+      "description": "siii",
+      "location": "asdfasd"
+    }
+  ],
+  "education": [
+    {
+      "dates": "2003 - 2300",
+      "name": "ssss",
+      "location": ""
+    }
+  ]
+
+   
+}

@@ -1,8 +1,12 @@
 @use "tailwindcss";
 @use "primeicons/primeicons.css";
 
-.background {
+.background-primary {
   background-color:  #0f0716;
+}
+
+.background-secundary{
+  background-color: #060709;
 }
 
 .text-primary {
