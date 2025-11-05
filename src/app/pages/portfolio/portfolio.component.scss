@@ -40,33 +40,6 @@
   font-weight: bold; 
 }
 
-.bg-black {
-  /* Propiedades de estilo base */
-  background-color: black;
-  color: white;
-  
-  /* CLAVE 1: La transición debe incluir 'all' o 'transform' para animar la escala */
-  transition: all 0.3s ease-in-out; 
-  
-  /* CLAVE 2: Asegura el valor inicial de la escala si usas transformaciones */
-  transform: scale(1); 
-  
-  /* Otras propiedades de tu botón */
-  padding: 8px 20px;
-  border-radius: 999px;
-  cursor: pointer;
+.bg-gradient-primary{
+  background: linear-gradient(to right, #8e5dee, #c3bacb); 
 }
-
-/* Estado Seleccionado */
-.bg-selected {
-  /* Cambio de color */
-  background-color: blue !important;
-  color: white !important;
-
-  /* CLAVE 3: Aplicamos la transformación (se agranda un 5%) */
-  transform: scale(1.05); 
-  
-  /* Opcional: una ligera sombra para darle profundidad */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-

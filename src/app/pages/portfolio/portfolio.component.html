@@ -64,9 +64,13 @@
   <div class="w-full flex flex-col mt-12 px-4 text-center items-center gap-3">
     <h3 class="title-proyects text-5xl">Mis Proyectos recientes</h3>
     <p class="text-gray-200">asdfasdfasdfasdfasdfasdfasdfasdfasdf</p>
-    <div class="bg-black flex text-gray-200 rounded-full p-1 gap-6">
+    <div #buttonsGroup class="bg-black h-11.5 mt-10 bg-black relative flex text-gray-200 items-center rounded-full gap-6">
+      <div #selected class="bg-gradient-primary w-[44.3px] h-10 left-0 mx-0.5 bg-red-300 absolute z-1 rounded-full transition-transform duration-500 ease-in-out">
+      </div>
       @for (type of typesProyects; track $index) {
-        <button (click)="selectedType($index)" [class.bg-selected]='typeSelected === type.name' class="flex bg-black py-2 px-5 rounded-full cursor-pointer transition duration-300">{{type.name}}</button>
+        <button (click)="selectedType($index)" class="flex px-3 z-3 items-center justify-center rounded-full cursor-pointer">
+          <span class="text-lg">{{type.name}}</span>
+        </button>
       }
     </div>
   </div>
