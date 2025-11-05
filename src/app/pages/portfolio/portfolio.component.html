@@ -46,7 +46,7 @@
     <div class="flex flex-col items-center w-full lg:w-5/12">
       <div class="flex mt-12 items-center justify-center gap-3">
         <span class="text-primary text-3xl pi pi-sparkles"></span>
-        <h3 class="titles-experience text-4xl">{{experience.titleExperience}}</h3>
+        <h3 class="title-sections text-4xl">{{experience.titleExperience}}</h3>
       </div>
       <div class="mt-12 flex w-10/12 flex-col gap-6">
         @for (exp of experience.experience; track $index) {
@@ -60,10 +60,10 @@
   }
   
 </section>
-<section class="flex flex-col w-full items-center bg-primary">
-  <div class="max-w-[650px] flex flex-col mt-12 px-8 text-center items-center gap-3">
-    <h3 class="title-proyects text-5xl">Mis Proyectos</h3>
-    <p class="mt-8 text-lg lg:text-xl text-gray-200">Explora los proyectos recientes que he completado, demostrando mi habilidad para resolver problemas complejos y entregar soluciones de alta calidad.</p>
+<section class="flex flex-col py-16 w-full items-center bg-primary">
+  <div class="max-w-[650px] flex flex-col px-8 text-center items-center">
+    <h3 class="title-sections text-5xl">Mis Proyectos</h3>
+    <p class="mt-10 text-lg lg:text-xl text-gray-200">Explora los proyectos recientes que he completado, demostrando mi habilidad para resolver problemas complejos y entregar soluciones de alta calidad.</p>
     <div #buttonsGroup class="bg-black h-11.5 mt-10 bg-black relative flex text-gray-200 items-center rounded-full gap-6">
       <div #selected class="bg-gradient-primary w-[44.3px] h-10 left-0 mx-0.5 bg-red-300 absolute z-1 rounded-full transition-transform duration-500 ease-in-out">
       </div>
@@ -74,13 +74,40 @@
       }
     </div>
   </div>
-  <div class="mt-12 w-10/12 h-full grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3">
+  <div class="mt-12 w-10/12 h-full gap-10 grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3">
     @for (proyect of allProyects; track $index) {
-      <app-card-proyects></app-card-proyects>
+      <app-card-proyects
+        class="flex w-full h-[500px] justify-center"
+      ></app-card-proyects>
     }
   </div>
-  
-  
+</section>
+<section class="flex flex-col py-16 w-full items-center bg-secundary">
+  <div class="flex w-[600px] flex-col px-8 text-center items-center">
+    <h3 class="title-sections text-5xl">Mis habilidades</h3>
+    <p class="mt-10 text-lg lg:text-xl text-gray-200">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+  </div>
+  <div class="w-full">
+    @for (skill of allSkills.skills; track $index) {
+      <div>
+        <h4></h4>
+        <div class="w-full">
+            @for (tec of skill.tecnologies; track $index) {
+              <div>
+                <app-card-skills
+                [tecnology]="tec"
+                ></app-card-skills>
+                <div class="">
+                  <span>{{tec.name}}</span>
+                </div>
+              </div>
+               
+            }
+        </div>
+      </div>
+    }
+
+  </div>
 
 </section>
 

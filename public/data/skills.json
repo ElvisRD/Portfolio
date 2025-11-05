@@ -1,0 +1,39 @@
+{
+  "mySkills": {
+    "titleMySkills": "",
+    "description": "",
+    "skills": 
+    [
+      {
+        "titleSkill": "",
+        "tecnologies": [
+          {
+            "icon": "",
+            "name": "",
+            "percentage": ""
+          }
+        ]
+      },
+      {
+        "titleSkill": "",
+        "tecnologies": [
+          {
+            "icon": "",
+            "name": "",
+            "percentage": ""
+          }
+        ]
+      },
+      {
+        "titleSkill": "",
+        "tecnologies": [
+          {
+            "icon": "",
+            "name": "",
+            "percentage": ""
+          }
+        ]
+      }
+    ]
+  }
+}

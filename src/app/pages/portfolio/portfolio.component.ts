@@ -3,11 +3,14 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { CardExperienceComponent } from '../../components/card-experience/card-experience.component';
 import { cv } from '../../../../public/data/experience.json';
 import { proyects } from '../../../../public/data/proyects.json';
+import { mySkills } from '../../../../public/data/skills.json'
 import { CardProyectsComponent } from '../../components/card-proyects/card-proyects.component';
+import { CardSkillsComponent } from '../../components/card-skills/card-skills.component';
+
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent],
+  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
@@ -37,12 +40,18 @@ export class PortfolioComponent {
   ];
   experienceList = cv;
   allProyects = proyects;
+  allSkills = mySkills;
   typesProyects = [
     { name: 'All' },
     { name: 'Front' },
     { name: 'Back' },
     { name: 'Design' },
   ];
+
+  ngOnInit(){
+    console.log(this.allSkills);
+    
+  }
 
   selectedType(position: number) {
     const divElement: HTMLElement = this.selected.nativeElement;
