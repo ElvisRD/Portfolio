@@ -58,8 +58,6 @@ export class PortfolioComponent {
 
     let targetWidth = targetRect.width;
 
-    console.log(targetWidth)
-
     translationX = targetRect.left - containerRect.left; 
 
     if (position !== 0) {
