@@ -108,6 +108,26 @@
     }
 
   </div>
+</section>
+<section class="flex w-full justify-center bg-secundary">
+  <div class="flex flex-col items-center bg-primary w-[800px] p-6 rounded-xl">
+    <div class="mt-10 flex flex-col items-center justify-center">
+      <h3 class="title-sections text-4xl">Hablemos de tu Proyecto</h3>
+      <p></p>
+    </div>
+      <form class="mt-10 bg-red-300 w-10/12 grid grid-cols-2 gap-4" [formGroup]="formContact" (ngSubmit)="onSubmit()">
+        @for (input of inputContact ; track $index) {
+          <input type="text" class="bg-secundary p-3 text-gray-300" [placeholder]="input.name" [formControlName]="input.name">
+        }
+        <textarea placeholder="Mensaje"></textarea>
+        <div class="flex w-full justify-center">
+          <button type="submit" class="bg-primary px-4 py-2 rounded-full " [disabled]="formContact.invalid">
+            <span class="text-gray-300 text-xl">Enviar</span>
+          </button>
+        </div>
+      </form>
+  </div>
+
 
 </section>
 

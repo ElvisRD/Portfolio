@@ -6,10 +6,12 @@ import { proyects } from '../../../../public/data/proyects.json';
 import { mySkills } from '../../../../public/data/skills.json'
 import { CardProyectsComponent } from '../../components/card-proyects/card-proyects.component';
 import { CardSkillsComponent } from '../../components/card-skills/card-skills.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent],
+  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent, ReactiveFormsModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   
@@ -47,6 +49,23 @@ export class PortfolioComponent {
     { name: 'Back' },
     { name: 'Design' },
   ];
+  formContact = new FormGroup({
+    name: new FormControl('', Validators.required),
+    lastname: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.email),
+    phone: new FormControl(''),
+    message: new FormControl('', Validators.required)
+  })
+  inputContact = [
+    {
+      name: 'name',
+    },
+    {
+      name: 'lastname'
+    },
+    { name: 'email' },
+    { name: 'phone' },
+  ]
 
   ngOnInit(){
     console.log(this.allSkills);
@@ -76,5 +95,9 @@ export class PortfolioComponent {
     this.renderer.setStyle(divElement, 'width', `${targetWidth}px`);
     this.renderer.setStyle(divElement, 'transform', `translateX(${translationX}px)`);
 
+  }
+  
+  onSubmit(){
+    console.log('buenas')
   }
 }
