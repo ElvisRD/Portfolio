@@ -41,6 +41,41 @@
         <span class="text-md text-primary pi pi-arrow-down"></span>
     </button>
 </div>
+<section class="flex pb-18 w-full bg-secundary flex-col items-center  ">
+  <div class="mt-12 max-w-[650]">
+    <h3 class="title-sections text-5xl">Services</h3>
+    <p class="mt-10 text-lg lg:text-xl text-gray-300"></p>
+  </div>
+    <div class="mt-12 flex w-10/12 flex-wrap justify-center gap-8">
+        @for (service of allServices.services; track $index) {
+          <app-card-services
+           [service]="service"
+          ></app-card-services>
+        }
+    </div>
+</section>
+<section class="flex flex-col py-16 w-full items-center bg-primary">
+  <div class="max-w-[650px] flex flex-col px-8 text-center items-center">
+    <h3 class="title-sections text-5xl">Mis Proyectos</h3>
+    <p class="mt-10 text-lg lg:text-xl text-gray-300">Explora los proyectos recientes que he completado, demostrando mi habilidad para resolver problemas complejos y entregar soluciones de alta calidad.</p>
+    <div #buttonsGroup class="bg-black h-11.5 mt-10 bg-black relative flex text-gray-200 items-center rounded-full gap-6">
+      <div #selected class="bg-gradient-primary w-[44.3px] h-10 left-0 mx-0.5 bg-red-300 absolute z-1 rounded-full transition-transform duration-500 ease-in-out">
+      </div>
+      @for (type of typesProyects; track $index) {
+        <button (click)="selectedType($index)" class="flex px-3 z-3 items-center justify-center rounded-full cursor-pointer">
+          <span class="text-lg">{{type.name}}</span>
+        </button>
+      }
+    </div>
+  </div>
+  <div class="mt-12 w-10/12 h-full gap-10 grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3">
+    @for (proyect of allProyects; track $index) {
+      <app-card-proyects
+        class="flex w-full h-[500px] justify-center"
+      ></app-card-proyects>
+    }
+  </div>
+</section>
 <section class="flex flex-col w-full bg-secundary pb-12 lg:flex-row justify-center ">
   @for (experience of experienceList; track $index) {
     <div class="flex flex-col items-center w-full lg:w-5/12">
@@ -59,28 +94,6 @@
     </div>
   }
   
-</section>
-<section class="flex flex-col py-16 w-full items-center bg-primary">
-  <div class="max-w-[650px] flex flex-col px-8 text-center items-center">
-    <h3 class="title-sections text-5xl">Mis Proyectos</h3>
-    <p class="mt-10 text-lg lg:text-xl text-gray-200">Explora los proyectos recientes que he completado, demostrando mi habilidad para resolver problemas complejos y entregar soluciones de alta calidad.</p>
-    <div #buttonsGroup class="bg-black h-11.5 mt-10 bg-black relative flex text-gray-200 items-center rounded-full gap-6">
-      <div #selected class="bg-gradient-primary w-[44.3px] h-10 left-0 mx-0.5 bg-red-300 absolute z-1 rounded-full transition-transform duration-500 ease-in-out">
-      </div>
-      @for (type of typesProyects; track $index) {
-        <button (click)="selectedType($index)" class="flex px-3 z-3 items-center justify-center rounded-full cursor-pointer">
-          <span class="text-lg">{{type.name}}</span>
-        </button>
-      }
-    </div>
-  </div>
-  <div class="mt-12 w-10/12 h-full gap-10 grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-3">
-    @for (proyect of allProyects; track $index) {
-      <app-card-proyects
-        class="flex w-full h-[500px] justify-center"
-      ></app-card-proyects>
-    }
-  </div>
 </section>
 <section class="flex flex-col py-16 w-full items-center bg-secundary">
   <div class="flex max-w-[650px] flex-col px-8 text-center items-center">
@@ -109,20 +122,25 @@
 
   </div>
 </section>
-<section class="flex w-full justify-center bg-secundary">
-  <div class="flex flex-col items-center bg-primary w-[800px] p-6 rounded-xl">
+<section class="flex w-full py-16 justify-center bg-secundary">
+  <div class="flex flex-col items-center bg-primary w-[750px] p-4 mb-10 rounded-xl">
     <div class="mt-10 flex flex-col items-center justify-center">
-      <h3 class="title-sections text-4xl">Hablemos de tu Proyecto</h3>
+      <h3 class="title-sections text-5xl">Hablemos de tu Proyecto</h3>
       <p></p>
     </div>
-      <form class="mt-10 bg-red-300 w-10/12 grid grid-cols-2 gap-4" [formGroup]="formContact" (ngSubmit)="onSubmit()">
+      <form class="mt-10 w-9/12 grid grid-cols-2 gap-4" [formGroup]="formContact" (ngSubmit)="onSubmit()">
         @for (input of inputContact ; track $index) {
-          <input type="text" class="bg-secundary p-3 text-gray-300" [placeholder]="input.name" [formControlName]="input.name">
+          <input type="text" class="bg-secundary p-3 text-gray-300 rounded-lg" [placeholder]="input.name" [formControlName]="input.name">
         }
-        <textarea placeholder="Mensaje"></textarea>
-        <div class="flex w-full justify-center">
-          <button type="submit" class="bg-primary px-4 py-2 rounded-full " [disabled]="formContact.invalid">
-            <span class="text-gray-300 text-xl">Enviar</span>
+        <select class="bg-secundary p-3 text-gray-300 rounded-lg col-span-2" formControlName="type">
+          <option selected value="web">Aplicación web</option>
+          <option value="movil">Aplicación movil</option>
+          <option value="other">Otro</option>
+        </select>
+        <textarea class="flex bg-secundary h-[200px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-300" placeholder="Mensaje"></textarea>
+        <div class="flex w-full justify-center col-span-2">
+          <button type="submit" class="bg-primary px-5 py-2 rounded-full " >
+            <span class="text-gray-300 text-lg">Enviar</span>
           </button>
         </div>
       </form>

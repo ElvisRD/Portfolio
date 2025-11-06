@@ -1,0 +1,39 @@
+{
+  "info": {
+    "stats": [
+      {
+        "number": "",
+        "description": ""
+      },
+      {
+        "number": "",
+        "description": ""
+      },
+      {
+        "number": "",
+        "description": ""
+      },
+      {
+        "number": "",
+        "description": ""
+      }
+    ],
+    "services": [
+      {
+        "icon": "ionDesktopOutline",
+        "name": "Aplicaciones Web Personalizadas",
+        "description": "Desarrollo de soluciones web escalables (SaaS, e-commerce, plataformas), centradas en el rendimiento y la usabilidad."
+      },
+      {
+        "icon": "ionPhonePortraitOutline",
+        "name": "Aplicaciones Móviles Personalizadas",
+        "description": "Creación de aplicaciones para iOS y Android con experiencia nativa y rendimiento optimizado."
+      },
+      {
+        "icon": "ionCodeSlash",
+        "name": "Desarrollo Frontend",
+        "description": "Implementación de interfaces modernas y responsivas transformando diseños en una experiencia."
+      }
+    ]
+  }
+}
