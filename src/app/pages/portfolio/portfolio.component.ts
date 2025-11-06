@@ -6,15 +6,13 @@ import { proyects } from '../../../../public/data/proyects.json';
 import { mySkills } from '../../../../public/data/skills.json'
 import { CardProyectsComponent } from '../../components/card-proyects/card-proyects.component';
 import { CardSkillsComponent } from '../../components/card-skills/card-skills.component';
-import { provideIcons, NgIcon } from '@ng-icons/core';
-import { heroUsers } from '@ng-icons/heroicons/outline';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent, NgIcon],
+  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
-  providers: provideIcons({ heroUsers })
+  
 })
 export class PortfolioComponent {
   @ViewChild('selected') selected!: ElementRef;

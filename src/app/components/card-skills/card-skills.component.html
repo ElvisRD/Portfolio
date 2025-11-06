@@ -1,6 +1,9 @@
-<div class="">
-  <div>
-    <img src="" alt="">
-    <span>{{tecnology.percentage}}</span>
+<div class="bg-primary relative card media-object border-animated flex flex-col items-center justify-center size-[160px] rounded-2xl gap-5">
+ 
+  <div class="flex justify-center items-center">
+    <div class="flex icon text-[60px]">
+      <ng-icon [name]="tecnology.icon"></ng-icon>
+    </div>
   </div>
+  <span class="text-xl font-bold text-gray-300">{{ tecnology.percentage }} %</span>
 </div>

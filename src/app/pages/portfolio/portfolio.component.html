@@ -83,22 +83,22 @@
   </div>
 </section>
 <section class="flex flex-col py-16 w-full items-center bg-secundary">
-  <div class="flex w-[600px] flex-col px-8 text-center items-center">
+  <div class="flex max-w-[650px] flex-col px-8 text-center items-center">
     <h3 class="title-sections text-5xl">Mis habilidades</h3>
     <p class="mt-10 text-lg lg:text-xl text-gray-200">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
   </div>
   <div class="w-full">
     @for (skill of allSkills.skills; track $index) {
-      <div>
-        <h4></h4>
-        <div class="w-full">
+      <div class="flex w-full justify-center">
+        <h4>front</h4>
+        <div class="mt-18 flex w-full justify-center flex-wrap flex gap-6">
             @for (tec of skill.tecnologies; track $index) {
-              <div>
+              <div class="flex flex-col items-center">
                 <app-card-skills
-                [tecnology]="tec"
+                  [tecnology]="tec"
                 ></app-card-skills>
-                <div class="">
-                  <span>{{tec.name}}</span>
+                <div class="mt-4 flex w-full flex justify-center">
+                  <span class="text-xl text-primary">{{tec.name}}</span>
                 </div>
               </div>
                

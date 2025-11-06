@@ -9,42 +9,42 @@
         "tecnologies": [
           {
             "icon": "svglAngular",
-            "name": "",
+            "name": "Angular",
             "percentage": ""
           },
           {
             "icon": "svglReact",
-            "name": "",
+            "name": "React",
             "percentage": ""
           },
           {
             "icon": "svglJavascript",
-            "name": "",
+            "name": "Javascript",
             "percentage": ""
           },
           {
             "icon": "svglCss",
-            "name": "",
+            "name": "Css",
             "percentage": ""
           },
           {
             "icon": "svglTailwindcss",
-            "name": "",
+            "name": "Tailwind",
             "percentage": ""
           },
           {
             "icon": "svglBootstrap",
-            "name": "",
+            "name": "Boostrap",
             "percentage": ""
           },
           {
             "icon": "svglJavascript",
-            "name": "",
+            "name": "Javascript",
             "percentage": ""
           },
           {
             "icon": "svglTypescript",
-            "name": "",
+            "name": "Typescript",
             "percentage": ""
           }
         ]
@@ -54,37 +54,37 @@
         "tecnologies": [
           {
             "icon": "svglNodejs",
-            "name": "",
+            "name": "NodeJs",
             "percentage": ""
           },
           {
             "icon": "svglNestjs",
-            "name": "",
+            "name": "NestJs",
             "percentage": ""
           },
           {
             "icon": "svglSpring",
-            "name": "",
+            "name": "SpringBoot",
             "percentage": ""
           },
           {
             "icon": "svglPrismaDark",
-            "name": "",
+            "name": "Prisma",
             "percentage": ""
           },
           {
             "icon": "svglMysql",
-            "name": "",
+            "name": "MySql",
             "percentage": ""
           },
           {
             "icon": "svglPostgresql",
-            "name": "",
+            "name": "PostgresSQL",
             "percentage": ""
           },
           {
             "icon": "svglDocker",
-            "name": "",
+            "name": "Docker",
             "percentage": ""
           }
         ]
@@ -94,27 +94,22 @@
         "tecnologies": [
           {
             "icon": "svglGit",
-            "name": "",
+            "name": "Git",
             "percentage": ""
           },
           {
             "icon": "svglFigma",
-            "name": "",
+            "name": "Figma",
             "percentage": ""
           },
           {
             "icon": "svglPostman",
-            "name": "",
+            "name": "Postman",
             "percentage": ""
           },
           {
             "icon": "svglGithubDark",
-            "name": "",
-            "percentage": ""
-          },
-          {
-            "icon": "",
-            "name": "",
+            "name": "Github",
             "percentage": ""
           }
         ]
