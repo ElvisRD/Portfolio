@@ -46,7 +46,7 @@
     <div class="flex flex-col items-center w-full lg:w-5/12">
       <div class="flex mt-12 items-center justify-center gap-3">
         <span class="text-primary text-3xl pi pi-sparkles"></span>
-        <h3 class="title-sections text-4xl">{{experience.titleExperience}}</h3>
+        <h3 class="title-sections text-5xl">{{experience.titleExperience}}</h3>
       </div>
       <div class="mt-12 flex w-10/12 flex-col gap-6">
         @for (exp of experience.experience; track $index) {
@@ -87,11 +87,11 @@
     <h3 class="title-sections text-5xl">Mis habilidades</h3>
     <p class="mt-10 text-lg lg:text-xl text-gray-200">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
   </div>
-  <div class="w-full">
+  <div class="flex flex-col w-full ">
     @for (skill of allSkills.skills; track $index) {
-      <div class="flex w-full justify-center">
-        <h4>front</h4>
-        <div class="mt-18 flex w-full justify-center flex-wrap flex gap-6">
+      <div class="mt-12 flex w-full items-center flex-col">
+        <h4 class="title-sections text-4xl">{{skill.titleSkill}}</h4>
+        <div class="mt-12 flex w-full justify-center flex-wrap flex gap-6">
             @for (tec of skill.tecnologies; track $index) {
               <div class="flex flex-col items-center">
                 <app-card-skills

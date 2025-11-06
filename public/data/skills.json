@@ -5,7 +5,7 @@
     "skills": 
     [
       {
-        "titleSkill": "",
+        "titleSkill": "Front-end",
         "tecnologies": [
           {
             "icon": "svglAngular",
@@ -50,7 +50,7 @@
         ]
       },
       {
-        "titleSkill": "",
+        "titleSkill": "Back-end",
         "tecnologies": [
           {
             "icon": "svglNodejs",
@@ -90,7 +90,7 @@
         ]
       },
       {
-        "titleSkill": "",
+        "titleSkill": "Herramientas",
         "tecnologies": [
           {
             "icon": "svglGit",
