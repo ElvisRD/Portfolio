@@ -6,8 +6,8 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService} from '@ngx-translate/core';
 import { provideTranslateHttpLoader} from '@ngx-translate/http-loader';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
+
 
 export const appConfig: ApplicationConfig = {
   providers: 
@@ -15,7 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
     provideHttpClient(),
-    provideAnimations(),
     provideTranslateService({
       lang: 'es',
       fallbackLang: 'es',

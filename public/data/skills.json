@@ -8,7 +8,42 @@
         "titleSkill": "",
         "tecnologies": [
           {
-            "icon": "",
+            "icon": "svglAngular",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglReact",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglJavascript",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglCss",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglTailwindcss",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglBootstrap",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglJavascript",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglTypescript",
             "name": "",
             "percentage": ""
           }
@@ -18,7 +53,37 @@
         "titleSkill": "",
         "tecnologies": [
           {
-            "icon": "",
+            "icon": "svglNodejs",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglNestjs",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglSpring",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglPrismaDark",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglMysql",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglPostgresql",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglDocker",
             "name": "",
             "percentage": ""
           }
@@ -27,6 +92,26 @@
       {
         "titleSkill": "",
         "tecnologies": [
+          {
+            "icon": "svglGit",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglFigma",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglPostman",
+            "name": "",
+            "percentage": ""
+          },
+          {
+            "icon": "svglGithubDark",
+            "name": "",
+            "percentage": ""
+          },
           {
             "icon": "",
             "name": "",
