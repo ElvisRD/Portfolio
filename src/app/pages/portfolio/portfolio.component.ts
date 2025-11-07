@@ -5,16 +5,15 @@ import { CardProyectsComponent } from '../../components/card-proyects/card-proye
 import { CardSkillsComponent } from '../../components/card-skills/card-skills.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CardServicesComponent } from '../../components/card-services/card-services.component';
+
 
 import { cv } from '../../../../public/data/experience.json';
 import { proyects } from '../../../../public/data/proyects.json';
 import { mySkills } from '../../../../public/data/skills.json';
-import { info } from '../../../../public/data/services.json';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent, ReactiveFormsModule, CardServicesComponent],
+  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent, ReactiveFormsModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   
@@ -46,7 +45,6 @@ export class PortfolioComponent {
   experienceList = cv;
   allProyects = proyects;
   allSkills = mySkills;
-  allServices = info;
   typesProyects = [
     { name: 'All' },
     { name: 'Front' },
