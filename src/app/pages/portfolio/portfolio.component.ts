@@ -10,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { cv } from '../../../../public/data/experience.json';
 import { proyects } from '../../../../public/data/proyects.json';
 import { mySkills } from '../../../../public/data/skills.json';
+import {aboutMe} from '../../../../public/data/aboutMe.json'
 
 @Component({
   selector: 'app-portfolio',
@@ -45,6 +46,7 @@ export class PortfolioComponent {
   experienceList = cv;
   allProyects = proyects;
   allSkills = mySkills;
+  aboutMe = aboutMe;
   typesProyects = [
     { name: 'All' },
     { name: 'Front' },
