@@ -3,7 +3,7 @@
   >
     <div class="flex w-full md:w-6/12 justify-center pl-0 md:pl-24 lg:pl-0">
         <img 
-          class="size-[250px] md:size-[600px] object-cover img-profile" src="profile.jpg" alt="foto de perfil">
+          class="size-[300px] md:size-[600px] object-cover img-profile" src="profile.jpg" alt="foto de perfil">
     </div>
     <div class="w-full mt-4 items-center md:w-6/12 flex flex-col text-white">
       <div class="flex flex-col w-11/12 max-w-[800px] ml-0 md:ml-14 gap-3 p-4 text-center md:text-left">
@@ -41,16 +41,16 @@
         <span class="text-md text-primary pi pi-arrow-down"></span>
     </button>
 </div>
-<section class="flex pb-18 w-full justify-center bg-secundary ">
-  <div class="flex mt-10 w-8/12">
-    <div class="w-6/12">
-       <div class="flex  holographic-container holographic-card">
-          <img class="img-aboutme" src="yo.jpg" alt="yo">
+<section class="flex py-4 xl:py-20 w-full justify-center bg-secundary ">
+  <div class="flex flex-col xl:flex-row mt-10 w-11/12 2xl:w-8/12">
+    <div class="flex mt-4 pb-0 xl:pb-8 justify-center w-full">
+       <div class="flex w-[340px] lg:w-[400px] xl:w-[500px] holographic-container holographic-card">
+          <img class="w-full h-full img-aboutme object-cover" src="yo.PNG" alt="yo">
         </div>
     </div>
-    <div class="mt-14 w-6/12 px-4">
+    <div class="mt-8 w-full px-8 pb-10 xl:pb-0">
       <h3 class="title-sections text-5xl">Quien soy</h3>
-      <p [innerHTML]="aboutMe" class="mt-10 text-lg lg:text-xl text-justify text-gray-300"></p>
+      <p [innerHTML]="aboutMe" class="mt-10 text-lg xl:text-xl text-justify text-gray-300"></p>
       <div></div>
     </div>
   </div>
