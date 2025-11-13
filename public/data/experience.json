@@ -17,8 +17,14 @@
     },
     {
       "dates": "Marzo 2022 - Junio 2022",
-      "position": "Desarrollador Móvil (Práctica profesional)",
+      "position": "Desarrollador Móvil",
       "description": "Desarrollo e implementación de interfaces móviles a partir de prototipos en Figma, utilizando React Native y Expo CLI. Implementación de APIs de Google para geolocalización y la identificación de ubicaciones especificas. Investigación y análisis de diversas librerías.",
+      "location": "Pryx"
+    },
+    {
+      "dates": "Marzo 2021 - Junio 2021",
+      "position": "Desarrollador Front-end",
+      "description": "Desarrollo frontend de una aplicación Iot, centrada en la visualización de datos en tiempo real y la interacción con dispositivos. Utilicé la librería React para construir una interfaz de usuario dinámica y reactiva. Implementé la integración de múltiples APIs externas clave para el procesamiento, la autenticación y la gestión operativa de los datos del ecosistema IoT.",
       "location": "Pryx"
     }
   ]
@@ -30,8 +36,14 @@
           "dates": "2019 - 2022",
           "position": "Ingeniería de Ejecución en Computacion e Informática",
           "location": "Universidad del BioBio"
+        },
+        {
+          "dates": "2013 - 2018",
+          "position": "Liceo Enrique Molina Garmendia",
+          "location": "Concepción"
         }
       ]
     }
+    
   ]
 }

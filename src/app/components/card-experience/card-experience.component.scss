@@ -1,6 +1,9 @@
-.card-color{
-  background-color: #140b1c;
+.card-exp{
+ scale: 1;
+ transition: scale 0.5s ease;
 }
-.text-color{
-  color: #5d488a;
+
+.card-exp:hover{
+scale: 1.05;
 }
+

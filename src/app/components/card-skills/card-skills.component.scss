@@ -1,12 +1,12 @@
 .card {
   border: 0;
   transform: scale(1);
-  transition: transform 1s ease
+  transition: transform 1s ease, background-color 1s ease;
 }
 
 .icon {
   filter: grayscale(80%);
-  transition: filter 0.5s ease, transform 0.5s ease; 
+  transition: filter 0.5s ease, transform 0.5s ease 
 }
 
 .card:hover .icon {
@@ -15,6 +15,7 @@
 }
 
 .card:hover{
+  background-color: #2a1a3a;
   transform: scale(1.1);
 }
 
