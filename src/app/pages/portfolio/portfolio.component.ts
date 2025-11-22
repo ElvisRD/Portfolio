@@ -6,6 +6,7 @@ import { CardSkillsComponent } from '../../components/card-skills/card-skills.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { emailJsConfig } from '../../environments/environment';
 
 
 import { cv } from '../../../../public/data/experience.json';
@@ -63,15 +64,13 @@ export class PortfolioComponent {
     message: new FormControl('', Validators.required)
   })
   inputContact = [
-    {
-      name: 'name',
-    },
-    {
-      name: 'lastname'
-    },
+    {name: 'name'},
+    {name: 'lastname'},
     { name: 'email' },
     { name: 'phone' },
   ]
+  statusEmail = 'noSend';
+
 
   ngOnInit(){
     console.log(this.allSkills);
@@ -106,11 +105,11 @@ export class PortfolioComponent {
   onSubmit(){
     console.log(this.formContact.value)
 
-    emailjs.send('service_ndtjdej', 'template_ex7ewnc', this.formContact.value, 'user_XYZ123abc456DEF')
+    emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, this.formContact.value, emailJsConfig.key)
       .then((result: EmailJSResponseStatus) => {
-        console.log('Email sent successfully:', result.text);
+        this.statusEmail = 'send';
       }, (error) => {
-        console.error('Error sending email:', error);
+        this.statusEmail = 'error';
       });
 
   }

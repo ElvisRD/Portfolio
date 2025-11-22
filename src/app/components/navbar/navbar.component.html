@@ -1,4 +1,7 @@
 <div class="flex w-full fixed h-18 z-1">
+  <div class="absolute left-0 ml-4 sm:ml-0 sm:right-0 sm:left-auto top-0 m-3.5">
+    <app-flag-selector></app-flag-selector>
+  </div>
   <div class="flex w-full justify-end md:justify-around items-center h-full">
       <div class="hidden xl:block flex flex-row">
         <span class="text-white">elvis.contact.me gmail.com</span>
@@ -12,7 +15,7 @@
         </button>
       </div>
     @if(isOpen){
-      <div class="flex text-white w-full h-50 items-center absolute  top-0 z-2 md:w-2/5 md:relative md:z-1 sm:h-18 ">
+      <div class="flex text-white w-full h-50 items-center absolute top-0 z-2 md:w-2/5 md:relative md:z-1 sm:h-18 ">
         <div class="absolute sm:hidden w-full h-40 background-navbar"></div>
         <ul class="flex w-full text-center justify-center z-3 flex-col gap-5 sm:flex-row">
             <a  href="">

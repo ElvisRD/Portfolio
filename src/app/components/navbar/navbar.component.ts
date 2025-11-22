@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { FlagSelectorComponent } from '../flag-selector/flag-selector.component';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
+  imports: [CommonModule, FlagSelectorComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
