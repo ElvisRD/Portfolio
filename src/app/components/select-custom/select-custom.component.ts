@@ -1,17 +1,26 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, forwardRef} from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-select-custom',
   imports: [],
   templateUrl: './select-custom.component.html',
   styleUrl: './select-custom.component.scss',
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => SelectCustomComponent),
+      multi: true
+    }
+  ]
 })
-export class SelectCustomComponent {
+export class SelectCustomComponent implements ControlValueAccessor {
   @Input() options: { value: string, label: string }[] = [];
 
   selectedOption: any = { value: 'web', label: 'Aplicación web'};
   lavelSelected: string = '';
   isOpen: boolean = false;
+  onTouched = () => {};
 
   // Funciones necesarias para ControlValueAccessor
   onChange: any = () => {};
@@ -47,6 +56,9 @@ export class SelectCustomComponent {
   }
 
   closeDropdown(): void {
-    this.isOpen = false;
+    setTimeout(() => {
+      this.isOpen = false;
+      this.onTouched(); 
+    }, 0);
   }
 }
