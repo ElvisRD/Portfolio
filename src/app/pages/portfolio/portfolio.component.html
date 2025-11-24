@@ -25,12 +25,12 @@
         <button
           class="flex items-center justify-center max-w-50 gap-3 px-8 py-3 border border-1 border-custom-color rounded-3xl"
         >
-          <span class="cursor-pointer text-md links">{{
+          <a href="data/documents/curriculum.pdf" download="curriculum.pdf" class="cursor-pointer text-md links">{{
             "home.downloadCV" | translate
-          }}</span>
+          }}</a>
           <span class="links text-md pi pi-download"></span>
         </button>
-        <div class="flex mt-2 gap-4 links justify-center">
+        <div class="flex mt-2 lg:mt-0 gap-4 links">
           @for (network of networks; track $index) {
           <button
             class="flex items-center justify-center w-9 h-9 rounded-full border border-primary cursor-pointer"
@@ -156,19 +156,19 @@
     }
   </div>
 </section>
-<section class="flex w-full py-16 justify-center bg-secundary">
+<section class="flex w-full py-20 justify-center bg-secundary">
   <div
-    class="flex flex-col items-center bg-primary w-[750px] p-4 mb-10 rounded-xl"
+    class="flex flex-col py-10 items-center bg-primary w-[660px] p-4 rounded-xl"
   >
     @if(statusEmail !== 'send'){
-    <div class="mt-10 flex flex-col items-center justify-center">
+    <div class="mt-4 flex flex-col items-center justify-center">
       <h3 class="title-sections text-5xl text-center">
         Hablemos de tu Proyecto
       </h3>
       <p></p>
     </div>
     <form
-      class="mt-10 w-9/12 grid grid-cols-2 gap-4"
+      class="mt-14 w-9/12 grid grid-cols-2 gap-4"
       [formGroup]="formContact"
       (ngSubmit)="onSubmit()"
     >
@@ -187,12 +187,13 @@
       >
       </app-select-custom>
       <textarea
-        class="flex bg-secundary h-[200px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-100 ring-primary"
+        class="flex bg-secundary h-[120px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-100 ring-primary"
+        [maxlength]="300"
         placeholder="Mensaje"
         formControlName="message"
       ></textarea>
-      <div class="my-2 flex w-full justify-center col-span-2">
-        <button type="submit" class="border border-primary px-6 py-2 rounded-full">
+      <div class="mt-8 mb-4 flex w-full justify-center col-span-2">
+        <button type="submit" class="border border-primary px-6 py-2 rounded-lg">
           <span class="text-gray-100 text-md">Enviar mensaje</span>
         </button>
       </div>
@@ -204,7 +205,7 @@
   <div>
     <img src="images/kanji.png" alt="kanji-soul" width="50px" height="50px" />
   </div>
-  <div class="mt-5">
+  <div class="mt-4">
     <ul class="flex text-white gap-4">
       <a class="text-gray-100" href="">buenas</a>
       <a class="text-gray-100" href="">asdfas</a>
@@ -212,7 +213,7 @@
       <a class="text-gray-100" href="">asdfasd</a>
     </ul>
   </div>
-  <span class="mt-5 text-gray-100"
+  <span class="mt-4 text-gray-100"
     >© 2025 Todos los derechos reservados por ElvisRD.</span
   >
 </section>
