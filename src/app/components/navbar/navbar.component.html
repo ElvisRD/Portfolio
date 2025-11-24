@@ -1,10 +1,11 @@
-<div class="flex w-full fixed h-18 z-1">
-  <div class="absolute left-0 ml-4 sm:ml-0 sm:right-0 sm:left-auto top-0 m-3.5">
+<div class="flex w-full fixed h-18 lg:h-24 z-1">
+  <div class="absolute left-0 ml-4 sm:ml-0 sm:right-0 sm:left-auto top-0 lg:top-3 m-3.5">
     <app-flag-selector></app-flag-selector>
   </div>
   <div class="flex w-full justify-end md:justify-around items-center h-full">
-      <div class="hidden xl:block flex flex-row">
-        <span class="text-white">elvis.contact.me gmail.com</span>
+      <div class="hidden xl:flex flex-row items-center gap-1.5">
+        <img src="images/kanji.png" alt="kanji" class="flex w-20 h-auto mr-2"/>
+        <span class="text-md lg:text-2xl text-white">elvis.contact.me gmail.com</span>
       </div>
       <div class="block sm:hidden z-3">
         <button (click)="openMenu()" class="w-9 h-9 mr-4 cursor-pointer border border-primary rounded-full z-2">
@@ -15,9 +16,9 @@
         </button>
       </div>
     @if(isOpen){
-      <div class="flex text-white w-full h-50 items-center absolute top-0 z-2 md:w-2/5 md:relative md:z-1 sm:h-18 ">
+      <div class="flex text-white w-full h-50 items-center absolute top-0 z-2 md:w-3/5 lg:w-2/5 md:relative md:z-1 sm:h-18 ">
         <div class="absolute sm:hidden w-full h-40 background-navbar"></div>
-        <ul class="flex w-full text-center justify-center z-3 flex-col gap-5 sm:flex-row">
+        <ul class="mt-20 sm:mt-0 flex w-full text-center justify-center z-3 flex-col text-white gap-5 sm:flex-row text-lg lg:text-2xl" >
             <a  href="">
               Home 
             </a>

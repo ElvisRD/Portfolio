@@ -1,8 +1,19 @@
+@use '../../../styles.scss' as s;
+
 .img-profile{
   border-radius: 20px;
   object-fit: cover;
   transform: rotate(4deg);
-  border: 1px solid #342b46;
+  border: 3px solid s.$color-secundary;
+  scale: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.img-profile:hover{
+  transform: rotate(0deg);
+  scale: 1.1;
+  border-color: s.$color-primary;
+  transition: all 0.5s ease-in-out;
 }
 
 .img-aboutme{

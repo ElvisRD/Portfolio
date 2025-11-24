@@ -22,14 +22,15 @@
         {{ "home.description" | translate }}
       </p>
       <div class="flex flex-col md:flex-row mt-5 gap-4 items-center">
-        <button
+        <a
           class="flex items-center justify-center max-w-50 gap-3 px-8 py-3 border border-1 border-custom-color rounded-3xl"
+          href="data/documents/curriculum.pdf" download
         >
-          <a href="data/documents/curriculum.pdf" download="curriculum.pdf" class="cursor-pointer text-md links">{{
+          <span class="cursor-pointer text-md links">{{
             "home.downloadCV" | translate
-          }}</a>
+          }}</span>
           <span class="links text-md pi pi-download"></span>
-        </button>
+        </a>
         <div class="flex mt-2 lg:mt-0 gap-4 links">
           @for (network of networks; track $index) {
           <button
@@ -203,7 +204,7 @@
 </section>
 <section class="bg-primary h-[200px] flex flex-col justify-center items-center">
   <div>
-    <img src="images/kanji.png" alt="kanji-soul" width="50px" height="50px" />
+    <img src="images/kanji.png" alt="kanji-soul" class="w-18" />
   </div>
   <div class="mt-4">
     <ul class="flex text-white gap-4">
