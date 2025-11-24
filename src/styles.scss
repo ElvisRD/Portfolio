@@ -2,12 +2,9 @@
 @use "primeicons/primeicons.css";
 
 
-
-$colors: (
-  'primary': #836bc1,
-  'secundary': #060709,
-  'tertiary': #140c1d,
-);
+$color-primary : #836bc1;
+$color-secundary : #060709;
+$color-tertiary : #140c1d;
 
 .bg-primary {
   background-color:  #0f0716;

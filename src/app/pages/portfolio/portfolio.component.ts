@@ -29,22 +29,10 @@ export class PortfolioComponent {
   constructor(private renderer: Renderer2) {}
 
   networks = [
-    {
-      icon: 'pi pi-instagram',
-      url: '',
-    },
-    {
-      icon: 'pi pi-telegram',
-      url: '',
-    },
-    {
-      icon: 'pi pi-linkedin',
-      url: '',
-    },
-    {
-      icon: 'pi pi-github',
-      url: '',
-    },
+    { icon: 'pi pi-instagram', url: ''},
+    { icon: 'pi pi-telegram', url: ''},
+    { icon: 'pi pi-linkedin', url: ''},
+    { icon: 'pi pi-github', url: ''}
   ];
   experienceList = cv;
   allProyects = proyects;
@@ -67,8 +55,8 @@ export class PortfolioComponent {
   inputContact = [
     {name: 'name'},
     {name: 'lastname'},
-    { name: 'email' },
-    { name: 'phone' },
+    {name: 'email' },
+    {name: 'phone' },
   ]
   typesApplication = [
     { value: 'web', label: 'Aplicación web' },

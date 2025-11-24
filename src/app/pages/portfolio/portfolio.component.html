@@ -175,44 +175,44 @@
       @for (input of inputContact ; track $index) {
       <input
         type="text"
-        class="bg-secundary p-3 text-gray-300 rounded-lg ring-primary"
+        class="bg-secundary p-3 text-gray-100 rounded-lg ring-primary"
         [placeholder]="input.name"
         [formControlName]="input.name"
       />
       }
       <app-select-custom
-        class="w-full bg-secundary text-gray-300 col-span-2 ring-primary"
+        class="w-full bg-secundary text-gray-100 col-span-2 ring-primary"
         [options]="typesApplication"
         formControlName="type"
       >
       </app-select-custom>
       <textarea
-        class="flex bg-secundary h-[200px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-300 ring-primary"
+        class="flex bg-secundary h-[200px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-100 ring-primary"
         placeholder="Mensaje"
         formControlName="message"
       ></textarea>
-      <div class="mt-2 flex w-full justify-center col-span-2">
+      <div class="my-2 flex w-full justify-center col-span-2">
         <button type="submit" class="border border-primary px-6 py-2 rounded-full">
-          <span class="text-gray-300 text-md">Enviar mensaje</span>
+          <span class="text-gray-100 text-md">Enviar mensaje</span>
         </button>
       </div>
     </form>
     }
   </div>
 </section>
-<section class="bg-primary h-[300px] flex flex-col items-center">
+<section class="bg-primary h-[200px] flex flex-col justify-center items-center">
   <div>
-    <img src="" alt="" />
+    <img src="images/kanji.png" alt="kanji-soul" width="50px" height="50px" />
   </div>
   <div class="mt-5">
     <ul class="flex text-white gap-4">
-      <a href="">buenas</a>
-      <a href="">asdfas</a>
-      <a href="">asdfasd</a>
-      <a href="">asdfasd</a>
+      <a class="text-gray-100" href="">buenas</a>
+      <a class="text-gray-100" href="">asdfas</a>
+      <a class="text-gray-100" href="">asdfasd</a>
+      <a class="text-gray-100" href="">asdfasd</a>
     </ul>
   </div>
-  <span class="mt-5 text-white"
+  <span class="mt-5 text-gray-100"
     >© 2025 Todos los derechos reservados por ElvisRD.</span
   >
 </section>

@@ -5,7 +5,7 @@
 }
 
 .option{
-  border: 2px solid map-get(s.$colors, $key: 'primary' );
+  border: 2px solid s.$color-primary;
   border-top: none;
   border-bottom: none;
   
@@ -16,6 +16,6 @@
 }
 
 .option:nth-child(3) {
-  border-bottom: 2px solid map-get(s.$colors, $key: 'primary' );
+  border-bottom: 2px solid s.$color-primary;
   border-radius: 0 0 8px 8px;
 }
