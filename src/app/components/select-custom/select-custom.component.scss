@@ -1,0 +1,21 @@
+@use '../../../styles.scss' as s;
+
+.option-item:hover{
+  background-color: #2a1a3a;
+}
+
+.option{
+  border: 2px solid map-get(s.$colors, $key: 'primary' );
+  border-top: none;
+  border-bottom: none;
+  
+}
+
+.option:nth-child(1) {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.option:nth-child(3) {
+  border-bottom: 2px solid map-get(s.$colors, $key: 'primary' );
+  border-radius: 0 0 8px 8px;
+}

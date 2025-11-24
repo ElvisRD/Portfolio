@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { emailJsConfig } from '../../environments/environment';
+import { SelectCustomComponent } from '../../components/select-custom/select-custom.component';
 
 
 import { cv } from '../../../../public/data/experience.json';
@@ -16,7 +17,7 @@ import {aboutMe} from '../../../../public/data/aboutMe.json'
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent, ReactiveFormsModule],
+  imports: [TranslatePipe, CardExperienceComponent, CardProyectsComponent, CardSkillsComponent, ReactiveFormsModule, SelectCustomComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   
@@ -69,6 +70,11 @@ export class PortfolioComponent {
     { name: 'email' },
     { name: 'phone' },
   ]
+  typesApplication = [
+    { value: 'web', label: 'Aplicación web' },
+    { value: 'movil', label: 'Aplicación movil' },
+    { value: 'other', label: 'Otro' }
+  ];
   statusEmail = 'noSend';
 
 
@@ -105,12 +111,13 @@ export class PortfolioComponent {
   onSubmit(){
     console.log(this.formContact.value)
 
-    emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, this.formContact.value, emailJsConfig.key)
+    /* emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, this.formContact.value, emailJsConfig.key)
       .then((result: EmailJSResponseStatus) => {
         this.statusEmail = 'send';
       }, (error) => {
         this.statusEmail = 'error';
-      });
+      }); */
 
   }
+
 }

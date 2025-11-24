@@ -175,27 +175,25 @@
       @for (input of inputContact ; track $index) {
       <input
         type="text"
-        class="bg-secundary p-3 text-gray-300 rounded-lg"
+        class="bg-secundary p-3 text-gray-300 rounded-lg ring-primary"
         [placeholder]="input.name"
         [formControlName]="input.name"
       />
       }
-      <select
-        class="bg-secundary p-3 text-gray-300 rounded-lg col-span-2"
+      <app-select-custom
+        class="w-full bg-secundary text-gray-300 col-span-2 ring-primary"
+        [options]="typesApplication"
         formControlName="type"
       >
-        <option selected value="web">Aplicación web</option>
-        <option value="movil">Aplicación movil</option>
-        <option value="other">Otro</option>
-      </select>
+      </app-select-custom>
       <textarea
-        class="flex bg-secundary h-[200px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-300"
+        class="flex bg-secundary h-[200px] p-3 w-full resize-none rounded-lg col-span-2 text-gray-300 ring-primary"
         placeholder="Mensaje"
         formControlName="message"
       ></textarea>
-      <div class="flex w-full justify-center col-span-2">
-        <button type="submit" class="bg-primary px-5 py-2 rounded-full">
-          <span class="text-gray-300 text-lg">Enviar</span>
+      <div class="mt-2 flex w-full justify-center col-span-2">
+        <button type="submit" class="border border-primary px-6 py-2 rounded-full">
+          <span class="text-gray-300 text-md">Enviar mensaje</span>
         </button>
       </div>
     </form>

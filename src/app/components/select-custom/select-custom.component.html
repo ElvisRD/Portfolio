@@ -1,0 +1,27 @@
+<div class="relative" (blur)="cerrarDropdown()" tabindex="0">
+  <button 
+    type="button"
+    class="flex items-center rounded-lg py-3 ring-primary relative pl-3 w-full h-full text-left appearance-none"
+    (click)="toggleDropdown()"
+  >
+    {{ selectedOption.label }}
+    <span class="absolute right-3 pi pi-angle-down"></span>
+  </button>
+
+  @if(isOpen){
+    <ul 
+    class="mt-1 bg-secundary absolute z-3 w-full rounded-md bg-white shadow-lg"
+  >
+  @for (option of options; track $index) {
+    <li 
+      [attr.data-value]="option.value"
+      (click)="selected(option)"
+      class="p-3 cursor-pointer text-gray-300 option
+             hover:bg-primary hover:text-white option-item"
+    >
+      {{ option.label }}
+    </li>
+  }
+  </ul>
+  }
+</div>

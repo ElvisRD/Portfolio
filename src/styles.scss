@@ -1,6 +1,14 @@
 @use "tailwindcss";
 @use "primeicons/primeicons.css";
 
+
+
+$colors: (
+  'primary': #836bc1,
+  'secundary': #060709,
+  'tertiary': #140c1d,
+);
+
 .bg-primary {
   background-color:  #0f0716;
 }
@@ -13,6 +21,11 @@
   background-color: #140c1d;
 }
 
+.ring-primary:focus {
+  outline-color: #836bc1 !important;
+  outline-width: 2px !important;
+  outline-style: solid
+}
 
 .text-primary {
   color: #836bc1;
