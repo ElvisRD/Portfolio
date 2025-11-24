@@ -46,7 +46,7 @@ export class SelectCustomComponent {
     this.onTouch();
   }
 
-  cerrarDropdown(): void {
+  closeDropdown(): void {
     this.isOpen = false;
   }
 }
